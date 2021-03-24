@@ -25,4 +25,4 @@ Test Project:
 4. enter into the folder 
 5. type "node server.js"
 6. check the port is running in chrome
-7. just run the code (remove server.js from android studio).
+7. just run the code in emulator (remove server.js from android studio).
