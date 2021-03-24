@@ -14,3 +14,15 @@ Retrofit sample
 
     // Logging
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+
+
+
+Test Project:
+
+1. install node.js
+2. create a folder indesktop and add file server.js in above code
+3. open cmd
+4. enter into the folder 
+5. type "node server.js"
+6. check the port is running in chrome
+7. just run the code (remove server.js from android studio).
