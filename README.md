@@ -26,3 +26,6 @@ Test Project:
 5. type "node server.js"
 6. check the port is running in chrome
 7. just run the code in emulator (remove server.js from android studio).
+
+
+In Retrofit 2, all network operations are performed via OkHttp library. OkHttp provides HttpLoggingInterceptor which logs HTTP request and response data.
