@@ -3,6 +3,7 @@ package com.vaisakh.hustler.retrofit_recyclerview_kotlin_mvvm
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.vaisakh.hustler.retrofit_recyclerview_kotlin_mvvm.Api.FetchListener
 import kotlinx.android.synthetic.main.activity_main.*
@@ -33,5 +34,53 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    private fun loadSingleData() {
+        Api(this@MainActivity).loadSingleData(4, object : Api.Fetchmodeldata {
+            override fun onmodeldata(result: Response<DataModel>, error: String?) {
+                if (error.equals("")) {
+                    val destination = result.body()
+                    destination?.let {
+                        Log.e("TAG", "onmodeldata:  ${destination.city}")
+                    }
+                }
+            }
+        })
+    }
+
+    private fun addSingledata() {
+        Api(this@MainActivity).AddSingleData("thrissur","your data","india", object : Api.Fetchmodeldata {
+            override fun onmodeldata(result: Response<DataModel>, error: String?) {
+                if (error.equals("")) {
+                    val destination = result.body()
+                    destination?.let {
+                        Toast.makeText(this@MainActivity, "Item Updated Successfully", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
+    }
+
+    private fun updateSingledata() {
+        Api(this@MainActivity).UpdateSingleData(4, object : Api.Fetchmodeldata {
+            override fun onmodeldata(result: Response<DataModel>, error: String?) {
+                if (error.equals("")) {
+                    val destination = result.body()
+                    destination?.let {
+                        Toast.makeText(this@MainActivity, "Item Updated Successfully", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
+    }
+
+    private fun DeleteSingleData() {
+        Api(this@MainActivity).DeleteSingleData(4, object : Api.Fetchmodeldata {
+            override fun onmodeldata(result: Response<DataModel>, error: String?) {
+                if (error.equals("")) {
+                        Toast.makeText(this@MainActivity, "Item Updated Successfully", Toast.LENGTH_SHORT).show()
+                }
+            }
+        })
+    }
 
 }
