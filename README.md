@@ -32,7 +32,8 @@ In Retrofit 2, all network operations are performed via OkHttp library. OkHttp p
 
 
 ServiceBuilder.kt
-package com.vaisakh.hustler.retrofit_recyclerview_kotlin_mvvm
+
+
 
 import android.os.Build
 import okhttp3.Interceptor
