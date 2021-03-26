@@ -34,17 +34,6 @@ In Retrofit 2, all network operations are performed via OkHttp library. OkHttp p
 ServiceBuilder.kt
 
 
-
-import android.os.Build
-import okhttp3.Interceptor
-import okhttp3.OkHttpClient
-import okhttp3.Response
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import java.util.*
-import java.util.concurrent.TimeUnit
-
 object ServiceBuilder {
 
     private const val URL = ""
